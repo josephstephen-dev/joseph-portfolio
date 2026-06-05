@@ -328,7 +328,8 @@ body{
 
 .hero-description{
     font-size:1.1rem;
-    line-height:1.7;
+    line-height:1.4;
+
 }
 
 .hero-actions{
@@ -339,8 +340,8 @@ body{
   margin-top:20px;
   margin-right:243px;
   align-items:center;
-  margin-left:203px;
-  margin-bottom:40px;
+  margin-left:103px;
+  margin-bottom:70px;
 
 }
 
