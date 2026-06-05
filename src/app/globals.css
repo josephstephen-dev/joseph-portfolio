@@ -311,7 +311,7 @@ body{
 }
 
 .hero-container{
-    padding:0 14px;
+    padding:0 4px;
 }
 
 .hero-eyebrow{
@@ -802,7 +802,7 @@ linear-gradient(
 }
 
   .proof-description{
-    max-width:100%;
+    max-width:20%;
     margin-bottom:70px;
 }
 
