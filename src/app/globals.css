@@ -784,7 +784,7 @@ linear-gradient(
 }
 
 
-@media (max-width: 1200px){
+@media (max-width: 768px){
 
   .proof-card-1{
     width:115%;
