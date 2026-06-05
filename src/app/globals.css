@@ -792,7 +792,7 @@ linear-gradient(
 }
 
   .proof-card-1{
-    width:110%;
+    width:111%;
     left:-5%;
   }
 
@@ -803,7 +803,7 @@ linear-gradient(
 
   .proof-card-2{
     width:47%;
-    right:-40;
+    right:-36;
     top:-70px;
   }
 
@@ -826,7 +826,7 @@ linear-gradient(
   .proof-card-4{
     width:60%;
     top:49%;
-    right:-39;
+    right:-36;
   }
 
   .proof-card-4 h3{
