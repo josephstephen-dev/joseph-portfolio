@@ -848,6 +848,8 @@ linear-gradient(
   margin:0;
 
   height:750px;
+  transform:scale(.94);
+transform-origin:top center;
 }
 
 }
