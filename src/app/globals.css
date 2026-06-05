@@ -338,9 +338,9 @@ body{
   display:flex;
   gap:30px;
   margin-top:20px;
-  padding-right:143px;
+  padding-right:0px;
   align-items:center;
-  padding-left:103px;
+  padding-left:0px;
   margin-bottom:70px;
 
 }
