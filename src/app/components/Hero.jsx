@@ -67,9 +67,7 @@ export default function Hero() {
           brands grow online.
         </p>
 
-      </div>
-
-      <div className="hero-actions">
+        <div className="hero-actions">
   <button className="hero-primary-btn">
     View Selected Work
   </button>
@@ -78,6 +76,9 @@ export default function Hero() {
     Start a Conversation
   </button>
 </div>
+
+      </div>
+
 
       <div className="section-indicator">
   {[
