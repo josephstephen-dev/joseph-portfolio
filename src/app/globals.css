@@ -849,13 +849,13 @@ linear-gradient(
 }
 
 .proof-layout{
-    display:flex;
+    position:relative;
 
-    flex-direction:column;
+    height:850px;
 
-    gap:20px;
+    max-width:360px;
 
-    height:auto;
+    margin:0 auto;
 }
 
 .proof-card{
@@ -874,26 +874,54 @@ linear-gradient(
     padding:28px;
 }
 
-.proof-card-1,
-.proof-card-2,
-.proof-card-3,
+.proof-card-1{
+    position:absolute !important;
+
+    top:0;
+    left:0;
+
+    width:85% !important;
+}
+
+.proof-card-2{
+    position:absolute !important;
+
+    top:170px;
+    right:0;
+
+    width:55% !important;
+}
+
+.proof-card-3{
+    position:absolute !important;
+
+    top:430px;
+    left:0;
+
+    width:55% !important;
+}
+
 .proof-card-4{
-    width:100% !important;
-}
+    position:absolute !important;
 
-.proof-card h3{
-    font-size:2.4rem !important;
-    line-height:1 !important;
+    top:520px;
+    right:0;
 
-    margin-top:0 !important;
-}
-
-.proof-card h4{
-    font-size:1rem !important;
+    width:55% !important;
 }
 
 .proof-card p{
     font-size:.95rem !important;
+}
+
+.proof-card-1 h3{
+    font-size:3.5rem !important;
+}
+
+.proof-card-2 h3,
+.proof-card-3 h3,
+.proof-card-4 h3{
+    font-size:2.2rem !important;
 }
 }
 
