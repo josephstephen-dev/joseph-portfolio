@@ -787,7 +787,7 @@ linear-gradient(
 @media (max-width: 768px){
 
   .proof-card-1{
-    width:115%;
+    width:95%;
     left:-10%;
   }
 
@@ -797,7 +797,7 @@ linear-gradient(
 }
 
   .proof-card-2{
-    width:55%;
+    width:50%;
     right:-65
   }
 
@@ -807,7 +807,7 @@ linear-gradient(
 }
 
   .proof-card-3{
-    width:60%;
+    width:50%;
     top:39%;
     left:-5%;
   }
@@ -818,7 +818,7 @@ linear-gradient(
 }
 
   .proof-card-4{
-    width:60%;
+    width:50%;
     top:49%;
     right:-53;
   }
@@ -830,6 +830,15 @@ linear-gradient(
 
   .proof-header{
   padding-left:5px;
+}
+
+.proof-layout{
+  width:100%;
+  max-width:100%;
+
+  margin:0;
+
+  height:750px;
 }
 
 }
