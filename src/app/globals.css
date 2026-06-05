@@ -320,7 +320,7 @@ body{
 }
 
 .hero-title{
-    font-size:clamp(5rem,14vw,6rem);
+    font-size:clamp(5rem,12vw,6rem);
     line-height:1;
     letter-spacing:-1px;
     
