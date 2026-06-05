@@ -62,8 +62,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-description">
-          Combining engineering precision with creative product thinking
-          to create fast, conversion-focused digital experiences that help
+          Fast, conversion-focused digital experiences that help
           brands grow online.
         </p>
 
