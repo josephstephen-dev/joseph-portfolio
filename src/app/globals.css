@@ -331,12 +331,14 @@ body{
 }
 
 .hero-actions{
-    display:flex;
     flex-direction:column;
-    gap:16px;
+    align-items:stretch;
+  display:flex;
+  gap:30px;
+  margin-top:290px;
+  margin-right:40px;
+  align-items:center;
 
-    width:100%;
-    margin-top:40px;
 }
 
 .hero-primary-btn,
@@ -347,7 +349,6 @@ body{
 
 .section-indicator{
     right:1rem;
-    display:none;
 }
 }
 
@@ -831,76 +832,6 @@ linear-gradient(
   padding-left:5px;
 }
 
-}
-
-@media (max-width:768px){
-
-.proof-section{
-    padding-top:60px;
-    padding-bottom:100px;
-}
-
-.proof-container{
-    padding:0 24px;
-}
-
-.proof-header{
-    padding-left:0;
-}
-
-.proof-layout{
-    position:relative;
-
-    height:850px;
-
-    max-width:360px;
-
-    margin:0 auto;
-}
-
-.proof-card{
-    position:relative !important;
-
-    top:auto !important;
-    left:auto !important;
-    right:auto !important;
-
-    width:100% !important;
-
-    max-height:none !important;
-
-    min-height:auto !important;
-
-    padding:28px;
-}
-
-.proof-card-1{
-    top:0;
-    left:0;
-    width:82%;
-}
-
-.proof-card-2{
-    top:140px;
-    right:0;
-    width:48%;
-}
-
-.proof-card-3{
-    top:380px;
-    left:0;
-    width:48%;
-}
-
-.proof-card-4{
-    top:520px;
-    right:0;
-    width:48%;
-}
-
-.proof-card p{
-    font-size:.95rem !important;
-}
 }
 
 /* =========================
