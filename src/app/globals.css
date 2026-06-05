@@ -786,6 +786,11 @@ linear-gradient(
 
 @media (max-width: 768px){
 
+  .proof-section{
+    padding-bottom:0px;
+
+}
+
   .proof-header{
   margin-bottom:120px;
   margin-top:40px;
@@ -1000,7 +1005,7 @@ radial-gradient(
   line-height:1.8;
 }
 
-@media (max-width:1200px){
+@media (max-width:768px){
 
   /* SECTION */
 
