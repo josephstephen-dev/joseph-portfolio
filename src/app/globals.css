@@ -448,11 +448,11 @@ body{
 .proof-title{
   font-family: var(--font-geist-sans);
 
-  font-size:clamp(3.2rem,5vw,4.6rem);
+  font-size:clamp(3.2rem,5vw,4rem);
 
   font-weight:500;
 
-  line-height:1.9;
+  line-height:1;
 
   letter-spacing:-3px;
 
@@ -786,8 +786,13 @@ linear-gradient(
 
 @media (max-width: 768px){
 
+  .proof-description{
+    max-width:100%;
+    margin-bottom:60px;
+}
+
   .proof-card-1{
-    width:95%;
+    width:115%;
     left:-10%;
   }
 
@@ -797,7 +802,7 @@ linear-gradient(
 }
 
   .proof-card-2{
-    width:50%;
+    width:55%;
     right:-65
   }
 
@@ -807,7 +812,7 @@ linear-gradient(
 }
 
   .proof-card-3{
-    width:50%;
+    width:60%;
     top:39%;
     left:-5%;
   }
@@ -818,7 +823,7 @@ linear-gradient(
 }
 
   .proof-card-4{
-    width:50%;
+    width:60%;
     top:49%;
     right:-53;
   }
@@ -828,8 +833,12 @@ linear-gradient(
   margin-top:-23px;
 }
 
-  .proof-header{
-  padding-left:5px;
+.proof-container{
+    padding:0 24px;
+}
+
+.proof-header{
+    padding-left:0;
 }
 
 .proof-layout{
