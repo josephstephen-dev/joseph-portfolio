@@ -335,7 +335,7 @@ body{
     align-items:stretch;
   display:flex;
   gap:30px;
-  margin-top:70px;
+  margin-top:60px;
   margin-right:40px;
   align-items:center;
 
@@ -787,8 +787,8 @@ linear-gradient(
 @media (max-width: 768px){
 
   .proof-header{
-  margin-bottom:150px;
-  margin-top:112px;
+  margin-bottom:140px;
+  margin-top:60px;
 }
 
   .proof-description{
