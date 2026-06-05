@@ -338,9 +338,9 @@ body{
   display:flex;
   gap:30px;
   margin-top:20px;
-  padding-right:0px;
+  padding-right:60px;
   align-items:center;
-  padding-left:0px;
+  padding-left:50px;
   margin-bottom:70px;
 
 }
@@ -797,7 +797,7 @@ linear-gradient(
 }
 
   .proof-header{
-  margin-bottom:120px;
+  margin-bottom:70px;
   margin-top:40px;
 }
 
