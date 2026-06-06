@@ -323,7 +323,7 @@ body{
     font-size:clamp(3rem,14vw,4.5rem);
     line-height:1;
     letter-spacing:-1px;
-    padding-top:20px;
+    padding-top:80px;
     max-width:100%;
 }
 
@@ -340,7 +340,7 @@ body{
     align-items:stretch;
   display:flex;
   gap:30px;
-  margin-top:20px;
+  margin-top:10px;
   padding-right:30px;
   align-items:center;
   padding-left:40px;
