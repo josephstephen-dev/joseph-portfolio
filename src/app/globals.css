@@ -1142,7 +1142,8 @@ cursor:pointer;
   backdrop-filter:blur(10px);
 }
 
-.timeline-card:hover{
+.timeline-card:hover,
+.timeline-card:active{
 
 transform:translateY(-10px);
 
@@ -1264,7 +1265,8 @@ border-color .45s ease;
 
 }
 
-.timeline-item:hover .timeline-icon{
+.timeline-item:hover .timeline-icon,
+.timeline-item:active .timeline-icon{
 
 transform:
 translateX(-50%)
@@ -1371,6 +1373,26 @@ cursor:pointer touch;
 .timeline-item.right .timeline-card{
   margin-left:-55px;
   margin-right:-115px;
+}
+
+.timeline-card:active{
+
+transform:translateY(-8px);
+
+border-color:
+rgba(90,150,255,.55);
+
+box-shadow:
+0 20px 50px rgba(0,60,255,.20),
+0 0 60px rgba(0,80,255,.18);
+
+background:
+linear-gradient(
+135deg,
+rgba(8,25,70,.98),
+rgba(5,15,45,.95)
+);
+
 }
 
 }
