@@ -60,9 +60,9 @@ export default function Proof() {
 
           <h3>2.4M+</h3>
 
-          <h4>Active users served</h4>
+          <h4>Users served</h4>
 
-          <p className="descript-card">Through scalable platforms</p>
+          <p>Through scalable platforms</p>
 
         </div>
 
