@@ -819,6 +819,11 @@ linear-gradient(
   margin-top:-30px;
 }
 
+  .descript-card{
+    padding-bottom: 15px;
+
+}
+
   .proof-card-2{
     width:47%;
     right:-35;

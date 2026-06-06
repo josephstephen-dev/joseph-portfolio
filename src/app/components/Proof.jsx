@@ -62,7 +62,7 @@ export default function Proof() {
 
           <h4>Active users served</h4>
 
-          <p>Through scalable platforms</p>
+          <p className="descript-card">Through scalable platforms</p>
 
         </div>
 
