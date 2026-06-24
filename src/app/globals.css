@@ -127,15 +127,14 @@ body{
   box-shadow:
     inset 0 0 20px rgba(80,130,255,.04),
     0 0 20px rgba(80,130,255,.04);
-
-  margin-bottom:24px;
+  margin-bottom:32px; /* increased spacing between badge and heading */
 }
 
 .hero-title{
   max-width:1100px;
 
   margin-top:0;
-  margin-bottom:40px;
+  margin-bottom:32px; /* consistent vertical rhythm */
 
   font-family:Inter,sans-serif;
 
@@ -159,7 +158,7 @@ body{
 
   margin-top:0;
 
-  margin-bottom:55px;
+  margin-bottom:32px; /* bring CTAs closer while keeping space */
 
   font-size:1.3rem;
 
@@ -171,8 +170,8 @@ body{
 .hero-actions{
   display:flex;
   gap:30px;
-  margin-top:650px;
-  margin-right:50px;
+  margin-top:0; /* remove large fixed offset; follow document flow */
+  margin-right:0;
   align-items:center;
 }
 
@@ -311,40 +310,37 @@ body{
 }
 
 .hero-container{
-    padding:0 4px;
+  padding:0 16px; /* prevent text from touching edges on small devices */
 }
 
 .hero-eyebrow{
-    font-size:.5rem;
-    padding:.5rem 1.4rem;
+  font-size:.62rem;
+  padding:.5rem 1rem;
 }
 
 .hero-title{
-    font-size:clamp(3rem,14vw,4.5rem);
-    line-height:1;
-    letter-spacing:-1px;
-    padding-top:110px;
+    font-size:clamp(3rem,14vw,6.5rem);
+  line-height:1.02;
+  letter-spacing:-1px;
+  padding-top:28px; /* reduce excessive top padding on mobile */
     max-width:100%;
 }
 
 .hero-description{
-    font-size:1.3rem;
-    line-height:1.1;
-    max-width:70%;
-    
-
+  font-size:1.15rem;
+  line-height:1.45; /* improve readability on small widths */
+  max-width:100%;
+  margin-right:0;
 }
 
 .hero-actions{
-    flex-direction:column;
-    align-items:stretch;
+  flex-direction:column;
+  align-items:stretch;
   display:flex;
-  gap:30px;
-  margin-top:10px;
-  padding-right:30px;
-  align-items:center;
-  padding-left:40px;
-  margin-bottom:70px;
+  gap:18px; /* tighter rhythm for stacked CTAs */
+  margin-top:18px;
+  padding:0 12px;
+  margin-bottom:48px;
 
 }
 
@@ -365,9 +361,8 @@ body{
 
 .proof-section{
   position:relative;
-
-  padding-top:70px;
-  padding-bottom:180px;
+  padding-top:80px; /* slightly more top space from hero */
+  padding-bottom:120px; /* reduce bottom gap to improve flow */
   font-family: var(--font-geist-sans);
 
   overflow:hidden;
@@ -483,7 +478,7 @@ body{
 
   color:#6f7c9c;
 
-  margin-bottom:130px;
+  margin-bottom:60px; /* align with other section rhythm */
 
   max-width:520px;
 }
@@ -794,8 +789,8 @@ linear-gradient(
 @media (max-width: 768px){
 
   .proof-section{
-    padding-bottom:0px;
-    padding-top:0px;
+    padding-bottom:40px;
+    padding-top:40px;
 
 }
 
@@ -805,8 +800,8 @@ linear-gradient(
 }
 
   .proof-description{
-    max-width:20%;
-    margin-bottom:70px;
+    max-width:100%;
+    margin-bottom:28px;
 }
 
   .proof-card-1{

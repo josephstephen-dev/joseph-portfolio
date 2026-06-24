@@ -5,52 +5,97 @@ import { useEffect, useState } from "react";
 export default function Hero() {
   const [activeSection, setActiveSection] = useState(0);
 
-  useEffect(() => {
-  const sections = [
-  "hero",
-  "proof",
-  "journey",
-  "projects",
-  "metrics",
-  "process",
-  "testimonials",
-  "contact",
+  const SECTION_IDS = [
+    "hero",
+    "proof",
+    "journey",
+    "projects",
+    "metrics",
+    "process",
+    "testimonials",
+    "contact",
   ];
 
-  const handleScroll = () => {
-    const scrollPosition =
-      window.scrollY + window.innerHeight / 2;
+  useEffect(() => {
+    const sections = SECTION_IDS.map((id) =>
+      document.getElementById(id)
+    );
 
-    sections.forEach((id, index) => {
-      const section = document.getElementById(id);
+    let rafId = null;
+    let ticking = false;
 
-      if (!section) return;
+   const computeVisibleIndex = () => {
+  const viewportCenter = window.innerHeight / 2;
 
-      const top = section.offsetTop;
-      const bottom = top + section.offsetHeight;
+  let closestIndex = 0;
+  let closestDistance = Infinity;
 
-      if (
-        scrollPosition >= top &&
-        scrollPosition < bottom
-      ) {
-        setActiveSection(index);
-      }
+  sections.forEach((section, index) => {
+    if (!section) {
+      console.log("Missing section:", SECTION_IDS[index]);
+      return;
+    }
+
+    const rect = section.getBoundingClientRect();
+    const sectionCenter = rect.top + rect.height / 2;
+
+    const distance = Math.abs(
+      viewportCenter - sectionCenter
+    );
+
+    console.log(
+      SECTION_IDS[index],
+      "top:",
+      rect.top,
+      "height:",
+      rect.height,
+      "distance:",
+      distance
+    );
+
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  console.log("ACTIVE:", closestIndex);
+
+  setActiveSection(closestIndex);
+};
+
+    const onScroll = () => {
+      if (ticking) return;
+
+      ticking = true;
+
+      rafId = requestAnimationFrame(() => {
+        computeVisibleIndex();
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, {
+      passive: true,
     });
-  };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", onScroll);
 
-  handleScroll();
+    computeVisibleIndex();
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+    };
+  }, []);
 
   return (
     <section id="hero" className="hero">
       <div className="hero-container">
-
         <div className="hero-eyebrow">
           ✦ ENGINEERING PRODUCTS PEOPLE USE
         </div>
@@ -67,44 +112,34 @@ export default function Hero() {
         </p>
 
         <div className="hero-actions">
-  <button className="hero-primary-btn">
-    View Selected Work
-  </button>
+          <button className="hero-primary-btn">
+            View Selected Work
+          </button>
 
-  <button className="hero-secondary-btn">
-    Start a Conversation
-  </button>
-</div>
-
+          <button className="hero-secondary-btn">
+            Start a Conversation
+          </button>
+        </div>
       </div>
 
-
       <div className="section-indicator">
-  {[
-    "hero",
-    "proof",
-    "journey",
-    "skills",
-    "process",
-    "projects",
-    "testimonials",
-    "contact",
-  ].map((id, index) => (
-    <span
-      key={id}
-      className={activeSection === index ? "active" : ""}
-      onClick={() =>
-        document
-          .getElementById(id)
-          ?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          })
-      }
-    />
-  ))}
-</div>
-
+        {SECTION_IDS.map((id, index) => (
+          <span
+            key={id}
+            className={
+              activeSection === index ? "active" : ""
+            }
+            onClick={() =>
+              document
+                .getElementById(id)
+                ?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                })
+            }
+          />
+        ))}
+      </div>
     </section>
   );
 }
