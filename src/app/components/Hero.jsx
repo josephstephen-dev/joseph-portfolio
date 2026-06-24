@@ -52,7 +52,7 @@ export default function Hero() {
       <div className="hero-container">
 
         <div className="hero-eyebrow">
-          ✦ PREMIUM ECOMMERCE ENGINEERING
+          ✦ ENGINEERING PRODUCTS PEOPLE USE
         </div>
 
         <h1 className="hero-title">
