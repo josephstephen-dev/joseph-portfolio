@@ -1,10 +1,9 @@
-import { ArrowRight, Mail } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { ArrowRight, BriefcaseBusiness, GitBranch, Mail } from "lucide-react";
 
 const CONTACT_LINKS = {
   email: "mailto:josephstep486@gmail.com",
-  linkedin: null,
-  github: null,
+  linkedin: "https://www.linkedin.com/in/josephstephen-dev/",
+  github: "https://github.com/josephstephen-dev",
 };
 
 const CONTACT_METHODS = [
@@ -19,13 +18,13 @@ const CONTACT_METHODS = [
     title: "LinkedIn",
     description: "Connect professionally.",
     href: CONTACT_LINKS.linkedin,
-    icon: FaLinkedin,
+    icon: BriefcaseBusiness,
   },
   {
     title: "GitHub",
     description: "See what I'm building.",
     href: CONTACT_LINKS.github,
-    icon: FaGithub,
+    icon: GitBranch,
   },
 ];
 
@@ -53,6 +52,8 @@ export default function Contact() {
                 className={`contact-card${href ? "" : " contact-card-placeholder"}`}
                 href={href || undefined}
                 key={title}
+                rel={href?.startsWith("http") ? "noreferrer" : undefined}
+                target={href?.startsWith("http") ? "_blank" : undefined}
               >
                 <Icon size={34} aria-hidden="true" />
                 <h3>{title}</h3>
